@@ -1,19 +1,36 @@
-\chapter{Visualization Design}
+\chapter{Contextual Inquiry}
 
+This chapter covers a contextual inquiry \cite{contextual-design} on mental health counselors working at a crisis hotline organization. We spoke with three Boston Samaritans counselors for two hours each on three different days. It is important to gain background and perform analysis of users by observing and interviewing them in their natural environment. User-centered design allows an interface to focus on solving specific needs.
 
+\section{Counselor Workflow}
 
-\section{Topic List}
+Counselors talk with clients using a chat-based web application on the Crisis Text Line platform. Clients access the hotline using SMS text messaging and are placed in a waiting queue if a counselor is not available at the moment. Counselors handle two or more conversations at a time because the incoming texts are asynchronous and sometimes sporadic. The observed workflow is described as follows:
 
+\begin{enumerate}
+  \item \textbf{Accept client:} Each time the system receives an incoming text from a new client, an alert is sounded and the client is placed in the queue. Counselors select a client from the queue when they are ready to take on another conversation by maintaining a balance of new and repeat clients. If a fellow counselor has become overloaded because they are managing more than three clients at once or one of the conversations has increased in severity, one of the conversations can be \textit{warm-transferred}. This simply means that a new counselor takes over the conversation while it is still ongoing. To get up to speed, the new counselor can read conversation notes taken by the original counselor or consult with them if necessary.
+  \item \textbf{Examine profile:} If the client is a repeat caller, the counselor can refer to a client profile consisting of previous counselor notes and a transcript of the three most recent conversations. Otherwise if the client is new, the counselor fills out the profile by asking them questions.
+Even with prior information to gain context, counselors are trained not to let the client know that they have access to that information because each conversation should be treated separately. We observed that it was time-consuming to read notes on previous conversations and even more time-consuming to read full transcripts.
+  \item \textbf{Provide counseling:} Counselors are trained to handle clients following this three-step system:
+  \begin{enumerate}
+    \item \textbf{\textit{Risk assessment:}} Determine the amount of risk involved in a client's situation. High risk might be if the client is in physical danger or may potentially hurt someone. A client that mostly wants someone to talk with in order to reduce stress might be lower risk.
+    \item \textbf{\textit{Issues and emotional state:}} Learn what the main issues are and how the client feels about them. Issues can range from job-related worries to relationship problems.
+    \item \textbf{\textit{Action plan:}} Develop a concrete plan with the client that may help them deal with their pressing crisis or general problems. For example, if the main issue is a lack of financial means, one plan might be an outline of steps to take to apply for jobs.
+  \end{enumerate}
+  \item \textbf{Take notes:} For each conversation, counselors take notes to cover the significant aspects of the interaction based on the three-step system. Some counselors take notes while the conversation is ongoing, and others take notes at the end. Our observations determined that roughly more than one third of the counselor's time was spent taking notes.
+  \item \textbf{Complete report:} At the end of each conversation, the counselor must fill out a separate report using a static template. The template has high-level categories of client problems and counselor responses. Completing the report was also time-consuming.
+  \item \textbf{Monitor queue:} Each counselor must keep an eye on the queue in addition to maintaining their own conversations. This is done because clients in the queue could be having a high-risk crisis, and therefore minimizing their wait time is important.
+\end{enumerate}
 
+Based on our observations of the typical counselor workflow, we concluded that there were many time-consuming tasks that reduced client-counselor interaction time. Taking over a \textit{warm-transferred} conversation requires reading prior notes or additional consultation. Counselors also read previous conversation notes or transcripts to gain context for a repeat caller. Taking the notes manually and filling out the end report took up a substantial amount of time as well.
 
-\section{Donut Chart}
+\section{Interview Results}
 
+In addition to observing the counselors as they managed conversations, contextual inquiry also involves interviewing them to gather their opinions. The three counselors we interviewed all discussed similar aspects that they wanted to change, which agreed with our observations:
 
+\begin{enumerate}
+  \item Taking detailed notes while handling multiple conversations in parallel was time-consuming.
+  \item For repeat clients, reading through previous conversation notes and transcripts was very helpful but also labor-intensive.
+  \item The conversation reports were determined to be both time-consuming and not useful. None of the three counselors even read previous reports, only taking the time with notes and transcripts. They explained that the report was too simple and rigid to be able to capture the complexity of most client problems.
+\end{enumerate}
 
-\section{Line Chart}
-
-
-
-\section{Scatter Plot}
-
-
+Our takeaway from the contextual inquiry was that we need to design our interface to solve or mitigate the problem of manual note-taking and reading. We believe that using topic modeling to automatically read and extract information from conversation transcripts will reduce or complement note-taking, while visualizing the extracted information will be a faster alternative to reading written text.

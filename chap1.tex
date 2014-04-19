@@ -11,13 +11,16 @@ the approaches to implement and evaluate, and the contributions made.
 The main motivating factor for this thesis is to help people with mental health crises.
 Many people suffer from depression, suicidal thoughts, and emotional stress every
 day. Crisis Text Line provides an outlet for clients to discuss their issues and ask
-for support. However, there is a shortage of counselors compared to the countless
+for support. However, there is a shortage of counselors compared to the
 number of people seeking aid. Each counselor may have to manage various
-conversations continuously for several hours. Many of these counselors are also
-volunteers who undergo a short period of training as preparation. These constraints
-motivate us to maximize the amount of time and brainpower counselors spend on
-client support. Time is a particularly critical factor in mental health situations because
-clients may be at risk of suicide or physical harm.
+conversations continuously for several hours. Counselors spend time on extraneous
+things such as reports. In addition to maximizing counseling time for clients,
+we want to assist counselors
+because crisis counselors tend to have a high attrition rate due to burnout and low morale.
+Many of these counselors are simply volunteers who undergo a short period of training.
+These constraints motivate us to maximize the amount of time and brainpower counselors
+spend on client support. Time is a critical factor in mental health situations
+because clients may be at risk of suicide or physical harm.
 
 Fortunately, the unique thing about a texting hotline is that the use of written
 communication allows computer programs to analyze and extract meaningful data
@@ -34,14 +37,13 @@ data that most people are familiar with.
 As mentioned in the motivation section, some main difficulties with Crisis Text Line
 are that there are not enough counselors to talk with all of the clients in crisis, the
 counselors are usually context switching between multiple different client texts at a
-time, and they need to be properly trained. Since it is more difficult to control external
-factors such as the number of available counselors, our approach to these issues
-consist of tackling four specific problems:
+time, they spend a nontrivial amount of time on other necessary tasks, and
+counselors may feel burned out. Since it is
+more difficult to control external factors such as the number of available counselors,
+we focus on tackling two specific problems:
 \begin{enumerate}
   \item Reduce the amount of time counselors spend not talking to clients.
-  \item Reduce the cognitive load of counselors so they can concentrate on clients.
-  \item Improve the quality of counselor training.
-  \item Improve the quality of client service.
+  \item Reduce the cognitive load of counselors so they feel less burned out.
 \end{enumerate}
 
 \section{Hypotheses}
@@ -80,19 +82,15 @@ the conversation related to a certain topic. This technique minimizes the amount
 time necessary to search through the text for details and potentially improves the
 quality of client service by better preparing the new counselor for the interaction.
 
-\subsection{Counselor Training}
+\subsection{Automated Reports}
 
-One potentially significant contributor to quality counseling, especially for new
-counselors, is the initial training that they receive. As many counselors are simply
-volunteers with little professional background in mental health, it can be important
-to show them the right way to respond to certain situations or test how they would
-reply to a real client message. I think topic models are a great resource for finding
-real and relevant training examples. Managers or supervisors can utilize the visual
-indexing aspect of the topic model visualizations to find helpful instances of client
-messages related to specific topics. Then a counselor can be easily trained for a
-specific area, such as crises involving jobs or family. This method may enhance
-the quality of counselor training and therefore client service, while decreasing the
-amount of time spent searching for or fabricating relevant samples.
+Certain crisis organizations require their counselors to complete reports on their
+conversations with clients. Although
+these reports may be helpful to some, they can be time-consuming to manually
+fill out. That time could be better spent interacting with clients. Given that we can
+use algorithms to analyze conversation text and extract information, we believe
+that this information can be used to automatically pre-populate reports.
+Another idea is to use visual summaries as a complementary form of a report.
 
 \subsection{Conversation Trends}
 
@@ -141,17 +139,21 @@ points represent the proportion of that topic in the corresponding message.
 \section{Thesis Outline}
 
 Chapter two presents related work, consisting of topic models, visualizations of
-topic models for other fields, and general visualization techniques.
+topic models for other fields, and mental health topic modeling. The scope and
+limitations of the thesis is also included in this chapter.
 
-Chapter three discusses the design of the four visualizations contributed in this
+Chapter three describes the contextual inquiry done with crisis counselors to
+analyze the needs of our users for a better design.
+
+Chapter four discusses the design of the four visualizations contributed in this
 this thesis: a topic list, a donut chart, a multi-series line chart, and a scatter plot.
 
-Chapter four explains how the system was implemented and lists the existing
+Chapter five explains how the system was implemented and lists the existing
 technologies that were used.
 
-Chapter five evaluates the visualizations based on the user test results.
+Chapter six evaluates the visualizations based on the user test results.
 
-Chapter six explores ideas for future work, some of which could not be completed
+Chapter seven explores ideas for future work, some of which could not be completed
 due to time, resource, and technological constraints.
 
-Finally, chapter seven discusses the main contributions presented in this thesis.
+Finally, chapter eight discusses the main contributions presented in this thesis.
