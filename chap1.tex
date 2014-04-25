@@ -1,26 +1,25 @@
 \chapter{Introduction}
 
-Crisis Text Line (CTL) is an organization that provides counseling services to young
-people in crisis through texting. The goal of this thesis is to supply CTL counselors
-with assistive tools in order to offer their clients the best possible service. This section
-explains the motivation behind this research project, the problems we want to solve,
-the approaches to implement and evaluate, and the contributions made.
+Crisis Text Line (CTL) \cite{ctl} is an organization that provides counseling services to
+young people in crisis through texting. The goal of this thesis is to supply CTL
+counselors with assistive tools in order to offer their clients the best possible service.
+This section explains the motivation behind this research project, the problems we
+want to solve, the approaches to implement and evaluate, and the contributions made.
 
 \section{Motivations for Mental Health Visualizations}
 
 The main motivating factor for this thesis is to help people with mental health crises.
 Many people suffer from depression, suicidal thoughts, and emotional stress every
-day. Crisis Text Line provides an outlet for clients to discuss their issues and ask
-for support. However, there is a shortage of counselors compared to the
-number of people seeking aid. Each counselor may have to manage various
-conversations continuously for several hours. Counselors spend time on extraneous
-things such as reports. In addition to maximizing counseling time for clients,
-we want to assist counselors
-because crisis counselors tend to have a high attrition rate due to burnout and low morale.
-Many of these counselors are simply volunteers who undergo a short period of training.
-These constraints motivate us to maximize the amount of time and brainpower counselors
-spend on client support. Time is a critical factor in mental health situations
-because clients may be at risk of suicide or physical harm.
+day. Crisis Text Line provides an outlet for clients to discuss their issues and ask for
+support. However, there is a shortage of counselors compared to the number of people
+seeking aid. Each counselor may have to manage various conversations continuously
+for several hours. Counselors also have to spend time on extraneous things such as
+reports. In addition to maximizing counseling time for clients, we want to assist
+counselors because crisis counselors tend to have a high attrition rate due to burnout
+and low morale. Many of these counselors are simply volunteers who undergo a short
+period of training. These constraints motivate us to maximize the amount of time
+and brainpower counselors spend on client support. Time is a critical factor in mental
+health situations because clients may be at risk of suicide or physical harm.
 
 Fortunately, the unique thing about a texting hotline is that the use of written
 communication allows computer programs to analyze and extract meaningful data
@@ -37,10 +36,9 @@ data that most people are familiar with.
 As mentioned in the motivation section, some main difficulties with Crisis Text Line
 are that there are not enough counselors to talk with all of the clients in crisis, the
 counselors are usually context switching between multiple different client texts at a
-time, they spend a nontrivial amount of time on other necessary tasks, and
-counselors may feel burned out. Since it is
-more difficult to control external factors such as the number of available counselors,
-we focus on tackling two specific problems:
+time, they spend a nontrivial amount of time on other necessary tasks, and counselors
+may feel burned out. Since it is more difficult to control external factors such as the
+number of available counselors, we focus on tackling two specific problems:
 \begin{enumerate}
   \item Reduce the amount of time counselors spend not talking to clients.
   \item Reduce the cognitive load of counselors so they feel less burned out.
@@ -57,103 +55,103 @@ in the conversation text.
 
 \subsection{Context Switching}
 
-As the medium of texting usually involves gaps in response time during a
-conversation, counselors often switch context between talking to different clients.
-When a counselor returns to a previous conversation after a client response,
-he or she may have to spend time recalling what that particular conversation was
-about. However, if the counselor was given a visual summary of the conversation,
-with the option of quickly reading through chat details, less time may be spent
-recognizing the conversation topics. This approach can minimize both the time
-a counselor spends not talking to a client and the cognitive load that context
-switching has on the counselor.
-
-\subsection{Shift Changes}
-
-Counselors usually handle incoming client texts in shifts. A shift change may occur
-in the middle of conversations, in which case the leaving counselor gives the
-incoming counselor a brief summary of the talking points so he or she can take
-over. However, this summary is general and transient, and the incoming counselor
-would have to take time scanning through the existing conversation text for details.
-We suspect that a permanent visual summary computed using topic models would be
-more helpful for the incoming counselor. The visualizations can provide different
-levels of detail depending on what the counselor needs to know about the
-conversation history. Visual indexing can quickly point him or her to the parts of
-the conversation related to a certain topic. This technique minimizes the amount of
-time necessary to search through the text for details and potentially improves the
-quality of client service by better preparing the new counselor for the interaction.
-
-\subsection{Automated Reports}
-
-Certain crisis organizations require their counselors to complete reports on their
-conversations with clients. Although
-these reports may be helpful to some, they can be time-consuming to manually
-fill out. That time could be better spent interacting with clients. Given that we can
-use algorithms to analyze conversation text and extract information, we believe
-that this information can be used to automatically pre-populate reports.
-Another idea is to use visual summaries as a complementary form of a report.
+As the medium of texting usually involves gaps in response time during a conversation,
+counselors often switch context between talking to different clients. When a counselor
+returns to a previous conversation after a client response, he or she may have to spend
+time recalling what that particular conversation was about. However, if the counselor
+was given a visual summary of the conversation, with the option of quickly reading
+through chat details, less time may be spent recognizing the conversation topics. This
+approach can minimize both the time a counselor spends not talking to a client and
+the cognitive load that context switching has on the counselor.
 
 \subsection{Conversation Trends}
 
-As previously mentioned, counselors must keep track of multiple conversations
-at a time. These conversations may also contain gaps of time due to the use of
-texting. In order to aid the counselor's memory, we believe that displaying topic
-trends over time for each conversation could be useful. Showing trends, including
-where topics appear in the course of a conversation and how they accumulate, may
-potentially improve the quality of client service. A chart of topic trends could alert the
-counselor to important focus points. For example, if the topic of self-injurious behavior
-is on the rise, the counselor might want to react in a certain way to prevent escalation
-of injury. Conversation trends may also be useful for organization leaders to detect
-patterns that might be of use in supporting clients.
+Another tactic to aid the counselor's memory management of different conversations
+may be to display topic trends over time for each conversation. This level of detail
+could remind counselors of the topics most recently discussed as well as the previous
+talking points. Showing trends, including where topics appear in the course of a
+conversation and how they accumulate, may also improve the quality of client service.
+A chart of topic trends could alert the counselor to important focus points. For
+example, if the topic of self-injurious behavior is on the rise, the counselor might
+want to react in a certain way to prevent escalation of injury. Conversation trends
+can also be useful for organization leaders to detect patterns that might be of use in
+supporting clients.
+
+\subsection{Shift Changes and Repeat Clients}
+
+Another situation that could potentially benefit from assistance is shift changes.
+Counselors usually handle incoming client texts in shifts. A shift change may
+occur in the middle of a conversation, in which case the leaving counselor gives the
+incoming counselor a brief summary of the talking points so he or she can take over.
+However, this summary is general and transient, and the incoming counselor would
+have to take time scanning through the existing conversation text for details.
+Similarly, counselors have the option of reading past conversations for a client that has
+texted the hotline previously to gain context. This is a useful but time-consuming
+process when taking on a repeat client. We suspect that a permanent visual summary
+computed using topic models would be more helpful for the counselor in both
+situations. The visualizations can provide different levels of detail depending on what
+the counselor needs to know about the conversation history. Visual indexing can
+quickly point him or her to the parts of the conversation related to a certain topic.
+This technique minimizes the amount of time necessary to search through the text
+for details and potentially improves the quality of client service by better preparing
+the new counselor for the interaction.
+
+\subsection{Automated Reports}
+
+Finally, certain crisis organizations require their counselors to complete reports on
+their conversations with clients. Although these reports may be helpful for some,
+they can be time-consuming to fill out manually. That time could be better spent
+interacting with clients. Given that we can use algorithms to analyze conversation text
+and extract information, we believe that this information can be used to automatically
+pre-populate reports. A visual summary can even act as a more effective report on
+its own, saving the counselors time by not having to fill out a report themselves.
 
 \section{Contributions}
 
 Based on a topic model developed from a collection of real mental health
-conversations, I designed and implemented a website prototype for Crisis Text
-Line with four visualizations. These visualizations were designed based on four
-different levels of granularity, so the counselor can choose the amount of detail
-he or she wants.
+conversations, I designed and implemented a website prototype for Crisis Text Line with four visualizations. These visualizations were designed based on four different levels of
+granularity, so the counselor can choose the amount of detail he or she wants.
 
 The \textbf{Topic List} visualization lists the topics discovered in a conversation that
 are above a certain threshold. Topics are ordered from highest to lowest percentage
-detected in the conversation. This visualization is a quick, glance-able summary of the
-conversation topics.
+detected in the conversation. This visualization is a quick, glance-able summary of
+the conversation topics.
 
-The \textbf{Donut Chart} visualization adds a small level of detail by displaying the
-topic proportions in a pie chart variation to show the parts of the whole relationship.
-User interaction by hovering over the chart or the legend provides the topic
-percentages for quantitative information.
+The \textbf{Donut Chart} visualization adds a small level of detail by displaying the topic
+proportions in a pie chart variation to show the parts of the whole relationship. User
+interaction by hovering over the chart or the legend provides the topic percentages 
+or quantitative information.
 
 The \textbf{Line Chart} visualization reaches finer granularity by revealing topic
-proportions at the message level, where each client message in the conversation
-is analyzed for topics. A line exists for each topic above a certain threshold that
-shows the trend of that topic throughout the conversation timeline. There is also
-the option of viewing the accumulation of topic proportions across the conversation.
-When the user clicks on a topic, points are displayed to reveal the client messages
-in the conversation that contain the topic.
+proportions at the message level, where each client message in the conversation is analyzed
+for topics. A line exists for each topic above a certain threshold that shows the trend
+of that topic throughout the conversation timeline. There is also the option of viewing
+the accumulation of topic proportions across the conversation. When the user clicks
+on a topic, points are displayed to reveal the client messages in the conversation that
+contain the topic.
 
 The \textbf{Scatter Plot} visualization is the deepest detail level, allowing the user to
 click on the topic instances that occur throughout the conversation. The conversation
-text then automatically scrolls to the appropriate message. The size of the scatter plot
-points represent the proportion of that topic in the corresponding message.
+text then automatically scrolls to the appropriate message. The size of the scatter
+plot points represent the proportion of that topic in the corresponding message.
 
 \section{Thesis Outline}
 
-Chapter two presents related work, consisting of topic models, visualizations of
-topic models for other fields, and mental health topic modeling. The scope and
-limitations of the thesis is also included in this chapter.
+Chapter two presents related work, consisting of topic models, topic model
+visualizations for other fields, and mental health topic modeling, as well as the scope and
+limitations of the thesis.
 
 Chapter three describes the contextual inquiry done with crisis counselors to
-analyze the needs of our users for a better design.
+analyze the specific needs of our users for a better design.
 
-Chapter four discusses the design of the four visualizations contributed in this
-this thesis: a topic list, a donut chart, a multi-series line chart, and a scatter plot.
+Chapter four discusses the design of the four visualizations contributed in this thesis:
+a topic list, a donut chart, a multi-series line chart, and a scatter plot.
 
 Chapter five explains how the system was implemented and lists the existing
 technologies that were used.
 
-Chapter six evaluates the visualizations based on the user test results.
+Chapter six evaluates the visualizations based on user test results.
 
-Chapter seven explores ideas for future work, some of which could not be completed
-due to time, resource, and technological constraints.
+Chapter seven explores ideas for future work.
 
 Finally, chapter eight discusses the main contributions presented in this thesis.
